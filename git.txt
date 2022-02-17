@@ -1,2 +1,70 @@
-123
-123
+import math
+for i in range(10):
+    def number():
+        first_number =float(input("Введи первое число: "))
+        
+        second_number = float(input("Введи второе число: "))
+
+    PI = math.pi   
+
+    what = input("что делаем?(+,-,*,/,**, () = объем цилиндра, mas =  масса цилиндра): ")
+    if what == "+":
+        number()
+        result = first_number + second_number
+        print ("результат: " + str(result))
+
+    elif what == "-":
+        number()
+        result = first_number - second_number
+        print ("результат: " + str(result))
+
+    elif what == "*":
+        number()
+        result = first_number * second_number
+        print ("результат: " + str(result))
+
+    elif what == "/":
+        number()
+        result = first_number / second_number
+        print ("результат: " + str(result))
+
+    elif what == "**":
+        number()
+        result = first_number ** second_number
+        print ("Результат: " + str(result))
+
+    elif what == '()':
+        def radius():
+            diam = float(input("Введи диаметр цилиндра в см: ")) 
+            diam /= 2
+            return diam
+        def height():
+            heit = float(input("Введи высоту цилиндра в см: "))
+            return heit
+        def vol():
+            r = radius()
+            h = height()
+            s = PI*r**2
+            v = s*h
+            return v
+        print('обьем цилиндра', vol(), ('в см3'))
+    elif what == 'mas':
+        def radius():
+            diam = float(input("Введи диаметр цилиндра в см: ")) 
+            diam /= 2
+            return diam
+        def height():
+            heit = float(input("Введи высоту цилиндра в см: "))
+            return heit
+        def vol():
+            r = radius()
+            h = height()
+            s = PI*r**2
+            v = s*h
+            return v
+        def massa(g):
+            n = float(input('Введите удельный вес(г/см3): '))
+            return g*n/1000
+        print('вес цилиндра: ', massa(vol()))
+    else:
+        print('Ты дурак, давай все с начала-_-')
